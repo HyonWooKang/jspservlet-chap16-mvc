@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+	<entry key="selectEmpById">
+		<!-- 아이디, 이름, 부서코드, 직급코드, 급여, 퇴사여부N  -->
+		SELECT
+		       A.EMP_ID
+		     , A.EMP_NAME
+		     , A.DEPT_CODE
+		     , A.JOB_CODE
+		     , A.SALARY
+		  FROM EMPLOYEE A
+		 WHERE ENT_YN = 'N'
+		   AND A.EMP_ID = ?
+	</entry>
+	
+	<entry key="selectAllEmp">
+	<!-- 사원번호 직원명 주민등록번호 이메일 전화번호 부서코드 직급코드 급여등급 급여
+	     보너스율 관리자사번 퇴사일 입사일 퇴직여부 -->
+		SELECT
+		       A.EMP_ID
+		     , A.EMP_NAME
+		     , A.EMP_NO
+		     , A.EMAIL
+		     , A.PHONE
+		     , A.DEPT_CODE
+		     , A.JOB_CODE
+		     , A.SAL_LEVEL
+		     , A.SALARY
+		     , A.BONUS
+		     , A.MANAGER_ID
+		     , A.HIRE_DATE
+		     , A.ENT_DATE
+		     , A.ENT_YN
+		  FROM EMPLOYEE A
+		 WHERE A.ENT_YN = 'N'
+	</entry>
+	
+</properties>
